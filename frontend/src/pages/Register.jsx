@@ -22,7 +22,7 @@ function Register() {
     setLoading(true); setError('')
     try {
       // Maps seamlessly to your updated route handler passing all 3 arguments
-      await axios.post('http://localhost:5000/api/auth/register', { name, email, password })
+      await axios.post('https://mindmate-e33z.onrender.com/api/auth/register', { name, email, password })
       setSuccess('OTP sent to your email! Check your inbox.')
       setStep(2)
     } catch (err) {
@@ -35,7 +35,7 @@ function Register() {
     if (!otp) return setError('Please enter the OTP.')
     setLoading(true); setError('')
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/verify-otp', { email, otp })
+      const res = await axios.post('https://mindmate-e33z.onrender.com/api/auth/verify-otp', { email, otp })
       localStorage.setItem('token', res.data.token)
       localStorage.setItem('user', JSON.stringify(res.data.user))
       navigate('/chat')

@@ -54,7 +54,7 @@ function Chat() {
     setMessage('')
     setLoading(true)
     try {
-      const res = await axios.post('http://localhost:5000/api/chat/send',
+      const res = await axios.post('https://mindmate-e33z.onrender.com/api/chat/send',
         { message: text, chatId },
         { headers: { Authorization: `Bearer ${token}` } }
       )
