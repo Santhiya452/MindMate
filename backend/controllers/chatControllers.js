@@ -9,7 +9,7 @@ const sendMessage = async (req, res) => {
     const userId = req.user.id;
 
     const model = genAI.getGenerativeModel({ 
-      model: 'gemini-2.0-flash',
+      model: 'gemini-2.5-flash',
       systemInstruction: 'You are MindMate, an AI study companion for students. You help with exam preparation, coding problems, research, and learning. Be friendly, encouraging, and explain things clearly. You were created by Santhiya, a BCA student from Chennai.',
     });
 
