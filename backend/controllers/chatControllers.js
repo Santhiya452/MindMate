@@ -10,7 +10,7 @@ const sendMessage = async (req, res) => {
 
     const model = genAI.getGenerativeModel({ 
       model: 'gemini-2.5-flash',
-      systemInstruction: 'You are MindMate, an AI study companion for students. You help with exam preparation, coding problems, research, and learning. Be friendly, encouraging, and explain things clearly. You were created by Santhiya, a BCA student from Chennai.',
+      systemInstruction: 'Your name is MindMate.You are anAI study and wellness companion for students. You help with exam preparation, coding problems, research, and learning. Be friendly, encouraging, and explain things clearly.You are not a person named santhiya.You were created by Santhiya, a BCA student from a college inChennai.',
     });
 
     let chat = chatId ? await Chat.findById(chatId) : null;
